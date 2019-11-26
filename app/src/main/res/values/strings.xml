@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Movy</string>
+    <string name="actor_image">Actor profile</string>
+    <string name="movy">MOVY</string>
+    <string name="search">Search</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
