@@ -17,7 +17,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ActorDataSource extends PageKeyedDataSource<Long, Actors> {
-    public static int PAGE_SIZE = 6;
+    public static int PAGE_SIZE = 500;
     public static long FIRST_PAGE = 1;
     public static final String API_KEY = "2b52898e5f0c1cfc27c940eecb94ea80";
 

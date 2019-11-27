@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.develop.movy.utils.Image;
 import com.develop.movy.R;
 import com.develop.movy.model.Actors;
+import com.develop.movy.utils.Image;
 
 public class ActorsAdapter extends PagedListAdapter<Actors, ActorsAdapter.ActorViewHolder> {
 
@@ -87,5 +87,4 @@ public class ActorsAdapter extends PagedListAdapter<Actors, ActorsAdapter.ActorV
             return oldItem.equals(newItem);
         }
     };
-
 }

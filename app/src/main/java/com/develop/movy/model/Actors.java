@@ -2,7 +2,13 @@ package com.develop.movy.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.ImageView;
 
+import androidx.databinding.BindingAdapter;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.develop.movy.R;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -167,5 +173,12 @@ public class Actors implements Parcelable {
         parcel.writeByte((byte) (adult == null ? 0 : adult ? 1 : 2));
         parcel.writeString(name);
         parcel.writeTypedList(actorFilmsList);
+    }
+
+    @BindingAdapter("profileImage")
+    public static void loadImage(ImageView view, String imageUrl) {
+        Glide.with(view.getContext())
+                .load(imageUrl).apply(new RequestOptions().error(R.drawable.ic_launcher_background))
+                .into(view);
     }
 }

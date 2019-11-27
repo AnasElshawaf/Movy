@@ -4,34 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="actors"
             type="com.develop.movy.model.Actors" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
-        tools:context=".ui.PersonInfo.PersonInfoView">
+        android:background="@color/colorPrimaryDark"
+        tools:context=".ui.PersonInfo.ProfileInfoView">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/Card_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/_4sdp"
-            android:elevation="@dimen/_8sdp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
+            android:elevation="@dimen/_8sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:id="@+id/actor_profile"
                 android:layout_width="@dimen/_120sdp"
                 android:layout_height="@dimen/_140sdp"
-                android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/actor_profile" />
+                android:contentDescription="@string/actor_profile"
+                android:scaleType="centerCrop"
+                app:profileImage="@{imageUrl}" />
         </androidx.cardview.widget.CardView>
 
         <TextView
@@ -56,9 +63,9 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:textSize="@dimen/_14ssp"
-            android:textColor="@color/textColor"
             android:text="@{`Department: `+ actors.knownForDepartment}"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toTopOf="@+id/txt_popularity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/Card_profile"
@@ -70,9 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textSize="@dimen/_14ssp"
-            android:textColor="@color/textColor"
             android:text="@{`Popularity: ` + String.valueOf(actors.popularity)}"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toBottomOf="@+id/Card_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/Card_profile"
@@ -92,9 +99,10 @@
 
         <TextView
             android:id="@+id/txt_actor_profiles"
-            android:layout_width="3dp"
-            android:layout_height="21dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:gravity="center"
             android:text="@{actors.name + ` Profiles`}"
             android:textColor="@color/name_color"
             android:textSize="@dimen/_18ssp"

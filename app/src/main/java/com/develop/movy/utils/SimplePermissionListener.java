@@ -1,6 +1,6 @@
 package com.develop.movy.utils;
 
-import com.develop.movy.ui.main.MainActivity;
+import com.develop.movy.ui.main.ActorsView;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
@@ -9,33 +9,32 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 public class SimplePermissionListener implements PermissionListener {
 
-    private final MainActivity mainActivity;
+    private final ActorsView actorsView;
 
-    public SimplePermissionListener(MainActivity mainActivity) {
-        this.mainActivity = mainActivity;
+    public SimplePermissionListener(ActorsView actorsView) {
+        this.actorsView = actorsView;
     }
 
     @Override
     public void onPermissionGranted(PermissionGrantedResponse response) {
 
-        mainActivity.showPermissionGranted(response.getPermissionName());
+        actorsView.showPermissionGranted(response.getPermissionName());
     }
 
     @Override
     public void onPermissionDenied(PermissionDeniedResponse response) {
 
-        if (response.isPermanentlyDenied())
-        {
-            mainActivity.handlePermenentDeniedPermission(response.getPermissionName());
+        if (response.isPermanentlyDenied()) {
+            actorsView.handlePermenentDeniedPermission(response.getPermissionName());
             return;
         }
-        mainActivity.showPermissionDenied(response.getPermissionName());
+        actorsView.showPermissionDenied(response.getPermissionName());
 
     }
 
     @Override
     public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
 
-        mainActivity.showPermissionRational(token);
+        actorsView.showPermissionRational(token);
     }
 }

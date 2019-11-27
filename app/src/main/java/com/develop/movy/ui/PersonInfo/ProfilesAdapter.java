@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.develop.movy.utils.Image;
 import com.develop.movy.R;
 import com.develop.movy.model.Profiles;
+import com.develop.movy.utils.Image;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,7 @@ public class ProfilesAdapter extends RecyclerView.Adapter<ProfilesAdapter.ActorV
         this.onItemClick = onItemClick;
     }
 
-    public void setList(List<Profiles> profilesList ) {
+    public void setList(List<Profiles> profilesList) {
         this.profilesList = profilesList;
         notifyDataSetChanged();
     }

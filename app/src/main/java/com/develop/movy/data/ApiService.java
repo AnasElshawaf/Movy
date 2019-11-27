@@ -18,6 +18,7 @@ public interface ApiService {
 
     @GET("person/{person_id}/images")
     public Call<ActorResource> getActorImages(@Path("person_id") Integer personId,
-                                             @Query("api_key") String api_key
+                                              @Query("api_key") String api_key
     );
+    
 }

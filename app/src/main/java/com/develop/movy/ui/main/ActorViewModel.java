@@ -13,7 +13,7 @@ import com.develop.movy.model.Actors;
 public class ActorViewModel extends ViewModel {
 
     LiveData<PagedList<Actors>> actorsPagedList;
-    private LiveData<PageKeyedDataSource<Long,Actors>> liveDataSource;
+    private LiveData<PageKeyedDataSource<Long, Actors>> liveDataSource;
 
     public ActorViewModel() {
         init();

@@ -16,17 +16,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PersonInfoViewModel extends ViewModel {
+public class ProfileInfoViewModel extends ViewModel {
 
-    MutableLiveData<List<Profiles>> mutableLiveData=new MutableLiveData<>();
+    MutableLiveData<List<Profiles>> mutableLiveData = new MutableLiveData<>();
     public static final String API_KEY = "2b52898e5f0c1cfc27c940eecb94ea80";
 
-    public void getProfiles(Integer id){
-        ApiServiceBuilder.buildService(ApiService.class).getActorImages(id,API_KEY).enqueue(new Callback<ActorResource>() {
+    public void getProfiles(Integer id) {
+        ApiServiceBuilder.buildService(ApiService.class).getActorImages(id, API_KEY).enqueue(new Callback<ActorResource>() {
             @Override
             public void onResponse(Call<ActorResource> call, Response<ActorResource> response) {
-                if (response.body()!=null){
-                    Log.e("response",response.body().toString());
+                if (response.body() != null) {
+                    Log.e("response", response.body().toString());
                     mutableLiveData.setValue(response.body().profiles);
                 }
             }
