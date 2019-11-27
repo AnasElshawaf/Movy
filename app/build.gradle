@@ -12,6 +12,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -57,7 +62,6 @@ dependencies {
     // paging library
     implementation "android.arch.paging:runtime:1.0.1"
 
-    //materialsearchview
-    implementation 'br.com.mauker.materialsearchview:materialsearchview:1.2.3'
-
+    //RunTimePermission
+    implementation 'com.karumi:dexter:5.0.0'
 }

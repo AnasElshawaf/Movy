@@ -7,8 +7,8 @@ import androidx.paging.PageKeyedDataSource;
 
 import com.develop.movy.data.ApiService;
 import com.develop.movy.data.ApiServiceBuilder;
-import com.develop.movy.pojo.Actors;
-import com.develop.movy.pojo.PopularPeople;
+import com.develop.movy.model.Actors;
+import com.develop.movy.model.PopularPeople;
 
 import java.util.List;
 

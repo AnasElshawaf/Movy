@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.paging.DataSource;
 import androidx.paging.PageKeyedDataSource;
 
-import com.develop.movy.pojo.Actors;
+import com.develop.movy.model.Actors;
 
 public class ActorDataSourceFactory extends DataSource.Factory {
     public MutableLiveData<PageKeyedDataSource<Long,Actors>> actorLiveDataSource = new MutableLiveData<>();

@@ -8,7 +8,7 @@ import androidx.paging.PagedList;
 
 import com.develop.movy.DataSource.ActorDataSource;
 import com.develop.movy.DataSource.ActorDataSourceFactory;
-import com.develop.movy.pojo.Actors;
+import com.develop.movy.model.Actors;
 
 public class ActorViewModel extends ViewModel {
 

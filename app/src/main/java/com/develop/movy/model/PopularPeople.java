@@ -1,6 +1,4 @@
-package com.develop.movy.pojo;
-
-import android.os.Parcelable;
+package com.develop.movy.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -4,4 +4,10 @@
     <string name="movy">MOVY</string>
     <string name="search">Search</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="name">name</string>
+    <string name="department">Department : </string>
+    <string name="popularity">popularity</string>
+    <string name="actor_profile">actor profile</string>
+    <string name="save">Save</string>
+    <string name="cancle">Cancle</string>
 </resources>

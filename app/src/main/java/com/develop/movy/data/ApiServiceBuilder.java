@@ -6,7 +6,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiServiceBuilder {
     // Base URL
-    private static final String Base_URL = "https://api.themoviedb.org/3/";
+    public static final String Base_URL = "https://api.themoviedb.org/3/";
+    public static final String BASE_IMAGE_URL = "http://image.tmdb.org/t/p/";
 
     private ApiService apiService;
 
@@ -25,8 +26,8 @@ public class ApiServiceBuilder {
         return INSTANCE;
     }
 
-    public static <T> T buildService(Class<T> type)
-    {
+    public static <T> T buildService(Class<T> type) {
         return retrofit.create(type);
     }
+
 }

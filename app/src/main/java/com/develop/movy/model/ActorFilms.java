@@ -1,4 +1,4 @@
-package com.develop.movy.pojo;
+package com.develop.movy.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
